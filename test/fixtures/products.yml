@@ -6,6 +6,12 @@ one:
   image_url: MyString
   price: 9.99
 
+two:
+  title: MysString
+  description: opis
+  image_url: image_url
+  price: 0.05
+
 ruby:
   title: Programming Ruby 1.9
   description:
