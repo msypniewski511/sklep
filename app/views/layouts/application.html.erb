@@ -15,10 +15,13 @@
     </div>
     <div id="columns" >
       <div id="side" >
+      <%= render("cart") %>
         <a href="http://www...." >Home</a><br />
         <a href="http://www..../faq" >Questions</a><br />
         <a href="http://www..../news" >News</a><br />
         <a href="http://www..../contact" >Contact</a><br />
+        <% t = Time.now %>
+        <%= "Dzis jest #{t.day} #{t.month} #{t.year}" %>
       </div>
       <div id="main" >
         <%= yield %>

@@ -38,47 +38,51 @@
 }
 .store {
 	h1 {
-	margin: 0;
-	padding-bottom: 0.5em;
-	font: 150% sans-serif;
-	color: #226;
-	border-bottom: 3px dotted #77d;
+	  margin: 0;
+	  padding-bottom: 0.5em;
+	  font: 150% sans-serif;
+	  color: #226;
+	  border-bottom: 3px dotted #77d;
 	}
 
 	/* An entry in the store catalog */
 	.entry {
-	overflow: auto;
-	margin-top: 1em;
-	bordr-bottom: 1px dotted #77d;
-	min-hight: 100px;
+	  overflow: auto;
+	  margin-top: 1em;
+	  bordr-bottom: 1px dotted #77d;
+	  min-hight: 100px;
 
-	img {
-	width: 80px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	podition: absolute;
-	}
+	  img {
+	    width: 80px;
+	    margin-right: 5px;
+	    margin-bottom: 5px;
+	    podition: absolute;
+	  }
 
-	h3 {
-	font-size: 120%;
-	font-family: sans-serif;
-	margin-left: 100px;
-	margin-top: 0;
-	margin-bottom: 2px;
-	cplor: #227
-	}
+	  h3 {
+	    font-size: 120%;
+	    font-family: sans-serif;
+	    margin-left: 100px;
+	    margin-top: 0.5em;
+	    margin-bottom: 0.8em;
+	    cplor: #227
+	  }
 
-	p, div.price_line {
-	margin-left: 100px;
-	margin-top: 0.5em;
-	margin-bottom: 0.8em;
-	}
+	  p, div.price_line {
+	    margin-left: 100px;
+	    margin-top: 0.5em;
+	    margin-bottom: 0.8em;
 
-	.price {
-	color: #44a;
-	font-width: bold;
-	margin-right: 3em;
-	}
+	    form, div {
+	      display: inline;
+	    }
+	  }
+
+	  .price {
+	    color: #44a;
+	    font-width: bold;
+	    margin-right: 3em;
+	  }
 	}
 
 }
