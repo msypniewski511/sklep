@@ -1,12 +1,13 @@
-module CurrentCart
-	extend ActiveSupport::Concern
+module CurrentCart extend ActiveSupport::Concern
+  
+  private
 
-	private
-
-	  def set_cart
-	  	@cart = Cart.find(session[:cart_id])
-	  rescue ActiveReord::RecordNotFound
+    def set_cart
+      begin
+	    @cart = Cart.find(session[:cart_id])
+	  rescue ActiveRecord::RecordNotFound => e
 	  	@cart = Cart.create
 	  	session[:cart_id] = @cart_id
 	  end
+	end
 end

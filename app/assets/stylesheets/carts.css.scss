@@ -4,15 +4,34 @@
 
 .carts {
 	.cart_title {
-	font: 120% bold;
+	  font: 120% bold;
 	}
 
 	.item_price, .total_line {
-	text-align: right;
+	  text-align: right;
 	}
 
 	.total_line, .total_cell {
-	font-weight: bold;
+	  font-weight: bold;
 	border-top: 1px solid #595
 	}
+}
+.carts, #side #cart{
+    .item_price, .total_line {
+      text-allign: right;
+    }
+    .total_line .total_cell {
+      font-weight: bold;
+      border-top: 1px solid #595;
+    }
+}
+#cart, #cart table {
+	font-size: smaller;
+	color: white;
+}
+
+#cart table {
+	border-top: 1px dotted #595;
+	border-bottom: 1px dotted #595;
+	margin-bottom: 10px;
 }
