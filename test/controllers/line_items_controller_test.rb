@@ -35,7 +35,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show line_item" do
-    get line_item_url(@line_item)
+    get line_item_url(@line_item.id)
     assert_response :success
   end
 
@@ -46,7 +46,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update line_item" do
     patch line_item_url(@line_item), params: { line_item: { cart_id: @line_item.cart_id, product_id: @line_item.product_id } }
-    assert_response :success
+    assert_response :redirect
   end
 
   test "should destroy line_item" do
@@ -54,6 +54,6 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
       delete line_item_url(@line_item)
     end
 
-    assert_redirected_to line_items_url
+    assert_redirected_to store_url
   end
 end
