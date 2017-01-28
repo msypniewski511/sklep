@@ -10,8 +10,8 @@
 
   <body class="<%= controller.controller_name %>">
     <div id="banner" >
-      <%= image_tag("logo.png") %>
-      <%= @page_title || "Pragmatic Bookshelf" %>
+      <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshell' %>
+      <span class="title"><%= @page_title || "Pragmatic Bookshelf" %></span>
     </div>
     <div id="columns" >
       <div id="side" >
@@ -28,6 +28,15 @@
           <li><a href="http://www..../news" >News</a></li>
           <li><a href="http://www..../contact" >Contact</a></li>
         </ul>
+
+        <% if session[:user_id] %>
+          <ul>
+            <li><%= link_to 'Orders', orders_path %></li>
+            <li><%= link_to 'Produccts', products_path %></li>
+            <li><%= link_to 'Users', users_path %></li>
+          </ul>
+          <%= button_to 'Logout', logout_path, method: :delete %>
+        <% end %>
         <% t = Time.now %>
         <%= "Dzis jest #{t.day} #{t.month} #{t.year}" %>
       </div>

@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  skip_before_action :authorize, only: [:create, :update, :destroy]
   before_action :set_cart, only: [:edit, :update, :destroy, :show]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 

@@ -3,8 +3,10 @@
 <% end %>
 <h1>Your Pragmatic Catalog</h1>
 <% counter = session[:counter] %>
-<% if counter > 5 %>
-  <%= counter.to_s + " razy odwiedziles katalog" %>
+<% if counter %>
+  <% if counter > 5 %>
+    <%= counter.to_s + " razy odwiedziles katalog" %>
+  <% end %>
 <% end %>
 <!--Zaznaczanie sekcji w template, ktora bedziemy update-owac tylko gdy jakis produkt sie zmieni. -->
 <% cache @products do %>
