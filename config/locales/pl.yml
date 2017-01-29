@@ -19,6 +19,10 @@ pl:
       empty: "Opruznij koszyk"
       checkout: "Place"
 
+  line_items:
+    line_item:
+      decrement: "Odejmij prod"
+
   number:
     currency:
       format:

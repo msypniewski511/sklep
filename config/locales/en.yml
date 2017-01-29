@@ -39,6 +39,10 @@ en:
       total: "Total"
       empty: "Empty cart"
       checkout: "Checkout"
+  
+  line_items:
+    line_item:
+      decrement: "Decrement"
 
   number:
     currency:
