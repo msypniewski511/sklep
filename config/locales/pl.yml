@@ -1,0 +1,64 @@
+pl:
+  layouts:
+    application:
+      title: "Pragmatyczny regal na ksiazki"
+      home: "Domowa"
+      questions: "Pytania"
+      news: "Nowosci"
+      contact: "Kontakt"
+
+  store:
+    index:
+      title_html: "Pragmatyczny Katalog"
+      add_html: "Dodaj do katalogu"
+
+  carts:
+    cart:
+      title: "Twoj koszyk"
+      total: "Razem:"
+      empty: "Opruznij koszyk"
+      checkout: "Place"
+
+  number:
+    currency:
+      format:
+        unit: "$US"
+        precision: 2
+        separator: "."
+        delimiter: ','
+        format: "%n&nbsp;%u"
+
+  orders:
+    new:
+      legend: "Podaj swoje dane"
+    form:
+      name: "Pelna nazwa"
+      address_html: "Adres"
+      email: "E-mail"
+      pay_type: "Sposob platnosci"
+      pay_prompt_html: "Wybierz metode platnosci"
+      submit: "Zamow"
+
+  activerecord:
+    errors:
+      messages:
+        inclusion: "nie zawiera sie na liscie"
+        blank: "nie moze byc pusty"
+    models:
+      orders: "zamowienia"
+    attributes:
+      order:
+        address: "Adres"
+        name: "Pelna nazwa - imie i nazwisko"
+        email: "E-mail"
+        pay_type: "Forma platnosci"
+  errors:
+    template:
+      body: "Hay problem przy zapisie danych: "
+      header:
+        one: "1 blad nie pozwala na zapisanie %{model}"
+        other: "%{count} bledy nie pozwalaja na zapisanie %{model}"
+
+  thanks: "Dziekujemy za twoje zamowienie"
+
+  cart_empty: "Twoj koszyk jest pusty"
