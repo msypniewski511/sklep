@@ -14,12 +14,13 @@
       <tr>
         <td><%= link_to 'Show', cart %></td>
         <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
-        <td><%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', cart, method: :delete%></td>
+        <td><%= cart.id %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<%= Cart.all.size %>
 <%= link_to 'New Cart', new_cart_path %>

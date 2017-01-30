@@ -10,7 +10,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     get new_order_url
     assert_response :redirect
     assert_redirected_to store_url
-    assert_equal flash[:notice], 'Your cart is empty.'
+    assert_equal flash[:notice], 'Your cart is empty'
   end
  
   test "should get index" do
@@ -26,14 +26,9 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create order" do
     @cart = Cart.create
-      session[:cart_id] = @cart.id
-    puts "-------------------"
-    puts session[:cart_id].to_s
-    puts "------------------"
-    set_cart
-    #assert_difference('Order.count') do
-      #post orders_url, order: { id: @cart.id, address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type }
-    #end
+    assert_difference('Order.count') do
+      post orders_url, order: { id: @cart.id, address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type }
+    end
   end
 
 

@@ -39,12 +39,13 @@
             <li><%= link_to 'Orders', orders_path %></li>
             <li><%= link_to 'Produccts', products_path %></li>
             <li><%= link_to 'Users', users_path %></li>
+            <li><%= link_to 'Carts', carts_path %></li>
           </ul>
           <%= button_to 'Logout', logout_path, method: :delete %>
         <% end %>
         <% t = Time.now %>
-        <%= "Dzis jest #{t.day} #{t.month} #{t.year}" %>
-        <%= params[:locale].to_s %>
+        <%= "Dzis jest #{t.day} #{t.month} #{t.year}" %><br>
+        <%= params[:locale].to_s %><%= Cart.all.size %>
       </div>
       <div id="main" >
         <%= yield %>

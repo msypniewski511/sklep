@@ -1,7 +1,8 @@
 class CartsController < ApplicationController
   skip_before_action :authorize, only: [:create, :update, :destroy]
-  before_action :set_cart, only: [:edit, :update, :destroy, :show]
+  before_action :set_cart, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
+  
 
   # GET /carts
   # GET /carts.json
@@ -59,9 +60,9 @@ class CartsController < ApplicationController
   # DELETE /carts/1
   # DELETE /carts/1.json
   def destroy
-    #@cart = current_cart
     @cart.destroy
     session[:cart_id] = nil
+    @cart.destroy
     respond_to do |format|
       format.html { redirect_to store_url }
       format.js
