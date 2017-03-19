@@ -16,6 +16,7 @@
 #---
 # encoding: utf-8
 Product.delete_all
+
 Product.create(:title => 'Web Design for Developers',
   :description => 
     %{<p>
@@ -101,3 +102,5 @@ Product.create(:title => 'Ruby Performance Optimization',
       </p>},
   :image_url => '/assets/adrpo.jpg',
   :price => 46.50)
+User.create(:name => 'Maciej Sypniewski',
+  :password_digest => 'Ms55015501')
