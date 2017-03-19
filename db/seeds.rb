@@ -102,5 +102,3 @@ Product.create(:title => 'Ruby Performance Optimization',
       </p>},
   :image_url => '/assets/adrpo.jpg',
   :price => 46.50)
-User.create(:name => 'Maciej Sypniewski',
-  :password_digest => 'Ms55015501')
